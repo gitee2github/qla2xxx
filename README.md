@@ -1,37 +1,39 @@
-# qla2xxx
+# Marvell FC HBA 驱动源代码 
 
-#### 介绍
-provide Marvell QLogic FC HBA adapter qla2xxx driver for openEuler LTS version.
+## 介绍
+为openEuler 社区提供Marvell QLogic FC HBA 卡驱动
 
-#### 软件架构
-软件架构说明
+## 驱动信息
+Marvell QLogic FC HBA卡驱动源代码.
 
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+源代码上游来自Marvell 官方驱动下载网站 [Marvell/QLogic webisite](https://www.marvell.com/support/downloads.html)
 
 
-#### 特技
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+
+### 驱动版本
+> qla2xxx-x.y.z.
+
+
+
+
+
+
+
+## 安装方法
+
+安装.tar.gz格式的源码包步骤
+a.   执行“tar –zxvf qla2xxx-src--<ver>.tar.gz命令解压源码包。
+b.   执行“cd qla2xxx-<ver>/”命令进入源码包目录。
+c.   在源代码解压后的根目录执行“./extras/build.sh initrd”命令进行编译安装
+d.   驱动安装完成后，重启系统或依次执行“modprobe -r qla2xxx”命令卸载旧驱动和“modprobe -v qla2xxx”命令加载新驱动模块，让新驱动生效。
+e.   执行“modinfo qla2xxx”命令或"cat /sys/module/qla2xxx/version"命令，查看驱动版本，确认新的驱动已生效。
+
+
+### QLogic FC HBA driver
+
+1. This repository is for provide driver source code.
+2. this qla2xxx driver supports openEuler 20.03 LTS SP3 and openEuler 22.03 LTS version.
+3. this qla2xxx driver supports ARM64 and X64 platform.
+4. this qla2xxx driver supports Kunpeng and Phytium CPU platform.
+
